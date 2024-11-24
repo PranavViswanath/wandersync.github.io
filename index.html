@@ -16,6 +16,19 @@
         p {
             text-align: justify;
         }
+        .diagram {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .diagram-caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -26,12 +39,23 @@
         WanderSync is a collaborative travel management system designed to make travel planning easier and more collaborative for all. This project aims to solve the problem of uniting complex information spanning multiple itineraries, reducing trip confusion, and making the trip planning process more productive and enjoyable.
     </p>
 
-    <!-- Add other sections here as needed -->
-    <!-- Design & Architecture -->
-    <!-- User Interface (UI) -->
-    <!-- Functionality -->
-    <!-- Conclusions and Reflections/Learning -->
-    <!-- Contributors -->
+    <h2>Design & Architecture</h2>
+    <p>
+        WanderSync's architecture is built on a robust foundation of well-established design patterns and GRASP principles. Our sequence diagram illustrates the typical user workflow for adding accommodations, demonstrating how we've implemented a loop-based system that allows users to seamlessly add multiple accommodations while maintaining data consistency through our DatabaseManager.
+    </p>
 
+    <div class="diagram-container">
+        <img src="images/sequence-diagram.png" alt="Sequence Diagram" class="diagram">
+        <p class="diagram-caption">Figure 1: Sequence Diagram showing the Add Accommodation workflow</p>
+    </div>
+
+    <p>
+        The system's core functionality is distributed across several key classes, as shown in our Design Class Diagram. The User class serves as the central entity, connected to Itineraries, Accommodations, and Logistics. Each Destination contains essential attributes like travel dates, activities, and daily agendas, while the Logistics class handles trip statistics and contributor management.
+    </p>
+
+    <div class="diagram-container">
+        <img src="images/design-class-diagram.png" alt="Design Class Diagram" class="diagram">
+        <p class="diagram-caption">Figure 2: Design Class Diagram showing the system architecture</p>
+    </div>
 </body>
 </html>
